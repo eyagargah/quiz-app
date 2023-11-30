@@ -17,7 +17,10 @@ body {
   background-size: cover;
   .header {
     display: flex;
-    gap: 1.5%;
+    gap: 2%;
+    flex-direction: row;
+    justify-content: flex-end;
+
     .lightMode {
       content: var(--sun-url);
     }
