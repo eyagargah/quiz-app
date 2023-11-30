@@ -1,45 +1,52 @@
 html, body {
-  height: 100%;
-}
-
-body {
-  background-image: url("./assets/pattern-background-desktop-light.svg");
-  --text-color: #222;
-  --bkg-color: #F4F6FA;
-  --btn-txt-color: white;
-  --btn-bg-color: rgb(11, 88, 160);
-  --sun-url:url("./assets/icons/icon-sun-dark.svg");
-  --moon-url:url("./assets/icons/icon-moon-dark.svg");
-  margin: 4rem;
-  font-family: Roboto, "Helvetica Neue", sans-serif;
-  background-color: var(--bkg-color);
-  background-repeat: no-repeat;
-  background-size: cover;
-  .header {
-    display: flex;
-    gap: 2%;
-    flex-direction: row;
-    justify-content: flex-end;
-
-    .lightMode {
-      content: var(--sun-url);
-    }
-    .darkMode {
-      content : var(--moon-url);
+    height: 100%;
+  }
+  
+  body {
+    background-image: url("./assets/pattern-background-desktop-light.svg");
+    --text-color: #222;
+    --bkg-color: #F4F6FA;
+    --btn-txt-color: white;
+    --btn-bg-color: rgb(11, 88, 160);
+    --sun-url:url("./assets/icons/icon-sun-dark.svg");
+    --moon-url:url("./assets/icons/icon-moon-dark.svg");
+    margin: 4rem;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+    color: var(--text-color);
+    background-color: var(--bkg-color);
+    background-repeat: no-repeat;
+    background-size: cover;
+    .header {
+      margin: 3rem;
+      display: flex;
+      gap: 2%;
+      flex-direction: row;
+      justify-content: flex-end;
+  
+      .themeChange{
+        cursor: pointer;
+        transform: scale(2);
+      }
+      .lightMode {
+        content: var(--sun-url);
+      }
+      .darkMode {
+        content : var(--moon-url);
+      }
     }
   }
-}
-
-.dark-theme {
-  background-image: url("./assets/pattern-background-desktop-dark.svg") ;
-  background-repeat: no-repeat;
-  background-size: cover;
-  --text-color: #eee;
-  --bkg-color: #252222;
-  --btn-txt-color: rgb(46, 43, 43);
-  --btn-bg-color: rgb(20, 211, 195);
-  --sun-url:url("./assets/icons/icon-sun-light.svg");
-  --moon-url:url("./assets/icons/icon-moon-light.svg");
   
-}
-
+  .dark-theme {
+    background-image: url("./assets/pattern-background-desktop-dark.svg") ;
+    background-repeat: no-repeat;
+    background-size: cover;
+    --text-color: #eee;
+    --bkg-color: #313E51;
+    --btn-txt-color: rgb(46, 43, 43);
+    --btn-bg-color: rgb(20, 211, 195);
+    --sun-url:url("./assets/icons/icon-sun-light.svg");
+    --moon-url:url("./assets/icons/icon-moon-light.svg");
+    
+  }
+  
+  
