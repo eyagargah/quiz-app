@@ -1,11 +1,15 @@
 import { Component } from '@angular/core';
-import { Quiz } from '../models/quiz';
-
+import  quizzesData from '../../assets/quizes.json';
 @Component({
   selector: 'app-welcome',
   templateUrl: './welcome.component.html',
   styleUrls: ['./welcome.component.scss']
 })
 export class WelcomeComponent {
-   quizData: Quiz = require('../../assets/data.json');
+  
+   data = quizzesData.quizzes;
+   ngOnInit(){
+    console.log(this.data)
+   }
+
 }
