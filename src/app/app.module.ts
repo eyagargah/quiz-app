@@ -13,12 +13,14 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import { WelcomeComponent } from './welcome/welcome.component';
+import { QuizComponent } from './quiz/quiz.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavigationComponent,
-    WelcomeComponent
+    WelcomeComponent,
+    QuizComponent
   ],
   imports: [
     BrowserModule,
