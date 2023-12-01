@@ -1,9 +1,14 @@
 <div class="main">
-    <div class="welcome">
-        <h2>Welcome to the Frontend Quiz!</h2>
-        <h6>Pick a subject to get started.</h6>
+  <div class="welcome">
+    <h2>Welcome to the <b>Frontend Quiz!</b></h2>
+    <em>Pick a subject to get started.</em>
+  </div>
+  <div class="subjects">
+    <div class="buttons" *ngFor="let d of data">
+      <button>
+        <img src="../../assets/icons/{{d.icon}}">
+       <b>{{ d.title }}</b> 
+    </button>
     </div>
-    <div class="quizBtns">
-        
-    </div>
+  </div>
 </div>
