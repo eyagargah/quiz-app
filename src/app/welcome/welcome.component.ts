@@ -6,10 +6,15 @@ import  quizzesData from '../../assets/quizes.json';
   styleUrls: ['./welcome.component.scss']
 })
 export class WelcomeComponent {
-  
+   questions:any;
    data = quizzesData.quizzes;
    ngOnInit(){
     console.log(this.data[0].title)
+   }
+
+   getQuizQuestions(e:any , i:any){
+    
+    this.questions = this.data[i].questions;
    }
 
 }
