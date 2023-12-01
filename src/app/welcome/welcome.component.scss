@@ -1,0 +1,51 @@
+.main {
+  display: flex;
+  justify-content: space-between;
+  margin: 3rem;
+  margin-top: 8rem;
+  height: 60%;
+  .welcome {
+    
+    width: 50%;
+
+    h2 {
+      font-size: 4rem;
+      margin-top: 1rem;
+      margin-bottom: 3rem;
+      line-height: 4rem;
+      font-weight: 100;
+    }
+    em {
+      font-size: 1.5rem;
+      color: lightslategray;
+      
+    }
+  } 
+  .subjects {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+ 
+    button {
+        color: #313e51;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        background-color: white;
+        width: 90%;
+        margin-bottom: 1rem;
+        border: none;
+        padding: 1.2rem 0;
+        border-radius: 15px;
+        text-align: center;
+        transition: all 0.2s ease-in-out;
+        cursor: pointer;
+        outline: none;
+        font-size: 1.7rem;
+        font-weight: 300;
+        img {
+            margin: 0 1rem;
+        }
+    }
+  }
+}
