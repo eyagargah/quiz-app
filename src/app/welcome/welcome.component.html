@@ -4,8 +4,8 @@
     <em>Pick a subject to get started.</em>
   </div>
   <div class="subjects">
-    <div class="buttons" *ngFor="let d of data">
-      <button>
+    <div class="buttons" *ngFor="let d of data ;let i=index">
+      <button (click)="getQuizQuestions($event , i)">
         <img src="../../assets/icons/{{d.icon}}">
        <b>{{ d.title }}</b> 
     </button>
