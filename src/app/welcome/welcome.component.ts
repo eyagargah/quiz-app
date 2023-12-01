@@ -9,7 +9,7 @@ export class WelcomeComponent {
   
    data = quizzesData.quizzes;
    ngOnInit(){
-    console.log(this.data)
+    console.log(this.data[0].title)
    }
 
 }
