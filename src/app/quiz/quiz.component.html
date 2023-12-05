@@ -1,12 +1,12 @@
 <div class="main">
-    <div class="questionDiv" *ngFor="let q of questions ;let i=index">
-        <h1 class="number">Question {{i+1}} out of 10</h1>
-        <h3 class="question"></h3>
+    <div class="question">
+        <h1> Question {{i+1}} of 10</h1>
+        <b>{{questions[i].question}}</b>
     </div>
-    <div class="optionsDiv">
-        <div class="options">
-            <button class="option"></button>
+    <div class="optionsSection">
+        <div class="options" *ngFor="let o of questions[i].options">
+            <button>{{o}}</button>
         </div>
-        <button class="submit">Submit</button>
+        <button class="submit" (click)="submitAnswer()">Submit Answer</button>
     </div>
 </div>
