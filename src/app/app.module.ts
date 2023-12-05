@@ -16,6 +16,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { RouterModule } from '@angular/router';
 import { QuestionComponent } from './question/question.component';
 import { OptionComponent } from './option/option.component';
+import { ScoreComponent } from './score/score.component';
 
 
 @NgModule({
@@ -24,7 +25,8 @@ import { OptionComponent } from './option/option.component';
     WelcomeComponent,
     QuizComponent,
     QuestionComponent,
-    OptionComponent
+    OptionComponent,
+    ScoreComponent
   ],
   imports: [
     BrowserModule,
