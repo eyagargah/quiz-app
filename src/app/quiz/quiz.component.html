@@ -1,1 +1,12 @@
-<p>quiz works!</p>
+<div class="main">
+    <div class="questionDiv" *ngFor="let q of questions ;let i=index">
+        <h1 class="number">Question {{i+1}} out of 10</h1>
+        <h3 class="question"></h3>
+    </div>
+    <div class="optionsDiv">
+        <div class="options">
+            <button class="option"></button>
+        </div>
+        <button class="submit">Submit</button>
+    </div>
+</div>
