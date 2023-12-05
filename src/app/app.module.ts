@@ -14,13 +14,17 @@ import { WelcomeComponent } from './welcome/welcome.component';
 import { QuizComponent } from './quiz/quiz.component';
 import { AppRoutingModule } from './app-routing.module';
 import { RouterModule } from '@angular/router';
+import { QuestionComponent } from './question/question.component';
+import { OptionComponent } from './option/option.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     WelcomeComponent,
-    QuizComponent
+    QuizComponent,
+    QuestionComponent,
+    OptionComponent
   ],
   imports: [
     BrowserModule,
