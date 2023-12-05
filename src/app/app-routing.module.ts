@@ -5,7 +5,7 @@ import { QuizComponent } from './quiz/quiz.component';
 import { WelcomeComponent } from './welcome/welcome.component';
 
 const routes: Routes = [
-  {path : 'welcome' , component: WelcomeComponent},
+  {path : '' , component: WelcomeComponent},
   {path : 'quiz' , component: QuizComponent},
 ]
 
