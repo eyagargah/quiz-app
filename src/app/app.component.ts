@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'quiz-app';
-
+ 
   toggleDarkTheme(): void {
     document.body.classList.toggle('dark-theme');
   }
