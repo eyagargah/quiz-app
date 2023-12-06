@@ -1,12 +1,31 @@
 <div class="main">
-    <div class="question">
-        <h1> Question {{i+1}} of 10</h1>
-        <b>{{questions[i].question}}</b>
+  <div class="question">
+    <h1>Question {{ i + 1 }} of 10</h1>
+    <b>{{ questions[i].question }}</b>
+  </div>
+  <div class="optionsSection">
+    <div class="options">
+      <button class="option">
+        <b>A</b>
+        <p>{{ questions[i].options[0] }}</p>
+        <img />
+      </button>
+      <button class="option">
+        <b>B</b>
+        <p>{{ questions[i].options[0] }}</p>
+        <img />
+      </button>
+      <button class="option">
+        <b>C</b>
+        <p>{{ questions[i].options[0] }}</p>
+        <img />
+      </button>
+      <button class="option">
+        <b>D</b>
+        <p>{{ questions[i].options[0] }}</p>
+        <img />
+      </button>
     </div>
-    <div class="optionsSection">
-        <div class="options" *ngFor="let o of questions[i].options">
-            <button>{{o}}</button>
-        </div>
-        <button class="submit" (click)="submitAnswer()">Submit Answer</button>
-    </div>
+    <button class="submit" (click)="submitAnswer()">Submit Answer</button>
+  </div>
 </div>
