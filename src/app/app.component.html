@@ -1,11 +1,16 @@
 <div class="header">
-  <img class="lightMode" />
-  <mat-slide-toggle
-    class="themeChange"
-    color="primary"
-    (change)="toggleDarkTheme()"
-  >
-  </mat-slide-toggle>
-  <img class="darkMode" />
+  <div class="subjectIcon">
+    <img>
+  </div>
+  <div class="themeSwitch">
+    <img class="lightMode" />
+    <mat-slide-toggle
+      class="themeChange"
+      color="primary"
+      (change)="toggleDarkTheme()"
+    >
+    </mat-slide-toggle>
+    <img class="darkMode" />
+  </div>
 </div>
 <router-outlet></router-outlet>
