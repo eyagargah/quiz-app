@@ -1,30 +1,79 @@
 .main {
   display: flex;
   justify-content: space-between;
-
+  margin: 4rem;
   .question {
+    margin-top: 2rem;
+    width: 50%;
+    h1 {
+      margin-bottom: 2rem;
+    }
     b {
       font-size: 2rem;
     }
   }
   .optionsSection {
+    button {
+      width: 90%;
+      margin-bottom: 1rem;
+      border-color: transparent;
+      padding: 1.2rem 0;
+      border-radius: 15px;
+      text-align: center;
+      transition: all 0.2s ease-in-out;
+      cursor: pointer;
+      outline: none;
+      font-size: 1.7rem;
+      font-weight: 300;
+     
+    }
+    width: 50%;
     .options {
+    margin: 0.5rem;
+
       button {
         display: flex;
-        align-items: center;
+        align-items: baseline;
         justify-content: flex-start;
-        width: 90%;
-        margin-bottom: 1rem;
-        border: none;
-        padding: 1.2rem 0;
-        border-radius: 15px;
-        text-align: center;
-        transition: all 0.2s ease-in-out;
-        cursor: pointer;
-        outline: none;
-        font-size: 1.7rem;
-        font-weight: 300;
+        b {
+          color: #626C7F;
+          padding: 0.8rem;
+          border-radius: 8px;
+          margin:0 0.5rem;
+          background-color: #F4F6FA;
+        }
+
       }
+
+      button:hover {
+        border-color: #7986CB;
+        color: #7986CB;
+        b {
+          background-color: rgb(122, 136, 204 , 0.5);
+          
+        }
+      }
+
+      .correct {
+        border-color: green;
+        img {
+          background: url("../../assets/icons/icon-correct.svg");
+        }
+      }
+
+      .wrong {
+        border-color: red;
+        b {
+          background-color: red;
+        }
+        img {
+          background: url("../../assets/icons/icon-error.svg");
+        }
+      }
+    }
+    .submit {
+      background-color: #7986CB;
+      text-align: center;
     }
   }
 }
