@@ -27,17 +27,24 @@ html, body {
       flex-direction: row;
       justify-content: flex-end;
   
-      .themeChange{
-        cursor: pointer;
-        transform: scale(2);
+      .themeSwitch {
+        width: 12%;
+        display: flex;
+        justify-content: space-evenly;
+        .themeChange{
+          cursor: pointer;
+          transform: scale(1.5);
+        }
+        .lightMode {
+          content: var(--sun-url);
+        }
+        .darkMode {
+          content : var(--moon-url);
+        }
       }
-      .lightMode {
-        content: var(--sun-url);
+
       }
-      .darkMode {
-        content : var(--moon-url);
-      }
-    }
+     
   }
   
   .dark-theme {
@@ -47,7 +54,7 @@ html, body {
     --text-color: #eee;
     --bkg-color: #313E51;
     --btn-txt-color: white;
-    --btn-bg-color: #313E51;
+    --btn-bg-color: #3B4D66;
     --sun-url:url("./assets/icons/icon-sun-light.svg");
     --moon-url:url("./assets/icons/icon-moon-light.svg");
     
