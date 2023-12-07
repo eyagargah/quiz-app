@@ -57,7 +57,7 @@
       .correct {
         border-color: green;
         img {
-          background: url("../../assets/icons/icon-correct.svg");
+          content: url("../../assets/icons/icon-correct.svg");
         }
       }
       .active {
@@ -74,7 +74,7 @@
           background-color: red;
         }
         img {
-          background: url("../../assets/icons/icon-error.svg");
+          content: url("../../assets/icons/icon-error.svg");
         }
       }
     }
