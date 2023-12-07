@@ -27,6 +27,7 @@ ngOnInit(){
   console.log(this.icon)
   console.table(this.questions)
   var buttons = document.querySelectorAll('.option');
+  var submitBtn = document.querySelector('.submit')
 
   // Add click event listener to each button
   buttons.forEach(function(button) {
@@ -45,6 +46,7 @@ ngOnInit(){
 
 submitAnswer(){
   
+
 }
 
 calculateScore(){
