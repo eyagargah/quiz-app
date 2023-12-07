@@ -44,11 +44,7 @@ ngOnInit(){
 }
 
 submitAnswer(){
-  if(this.i<9){
-    this.i++
-  }else if(this.i==9){
-    this.router.navigate(['score']);
-  }
+  
 }
 
 calculateScore(){
