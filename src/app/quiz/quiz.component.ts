@@ -33,12 +33,12 @@ ngOnInit(){
     button.addEventListener('click', function(e:any) {
       // Remove active class from all buttons
       buttons.forEach(function(btn) {
-        btn.classList.remove('correct');
+        btn.classList.remove('active');
         console.log(btn)
       });
       // Add active class to the clicked button
-      console.log(e.target)
-      e.target.classList.add('correct');
+      const selectedBtn = e.target.parentNode
+      selectedBtn.classList.add('active');
     });
   });
 }
