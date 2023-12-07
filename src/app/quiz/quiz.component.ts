@@ -19,12 +19,28 @@ export class QuizComponent {
 constructor(private quizService : QuizService , private router:Router){}
 
 ngOnInit(){
+
   this.title = this.quizService.getTitle()
   this.icon = this.quizService.getIcon()
   this.questions = this.quizService.getSubjectQuestions()
   console.log(this.title)
   console.log(this.icon)
   console.table(this.questions)
+  var buttons = document.querySelectorAll('.option');
+
+  // Add click event listener to each button
+  buttons.forEach(function(button) {
+    button.addEventListener('click', function(e:any) {
+      // Remove active class from all buttons
+      buttons.forEach(function(btn) {
+        btn.classList.remove('correct');
+        console.log(btn)
+      });
+      // Add active class to the clicked button
+      console.log(e.target)
+      e.target.classList.add('correct');
+    });
+  });
 }
 
 submitAnswer(){
