@@ -46,7 +46,11 @@ ngOnInit(){
 
 submitAnswer(i:any){
   let answer = document.querySelector('.active')?.children[1].innerHTML
-  let selectedAnswerBtn = document.querySelector('.active')
+  let submitBtn = document.querySelector('.submit')
+if(submitBtn){
+  submitBtn.innerHTML = "Next Question"
+
+}  let selectedAnswerBtn = document.querySelector('.active')
   if(answer == this.questions[i].answer ){
     selectedAnswerBtn?.classList.remove("active")
     selectedAnswerBtn?.classList.add('correct')
