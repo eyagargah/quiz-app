@@ -12,20 +12,20 @@
       </button>
       <button class="option">
         <b>B</b>
-        <p>{{ questions[i].options[0] }}</p>
+        <p>{{ questions[i].options[1] }}</p>
         <img />
       </button>
       <button class="option">
         <b>C</b>
-        <p>{{ questions[i].options[0] }}</p>
+        <p>{{ questions[i].options[2] }}</p>
         <img />
       </button>
       <button class="option">
         <b>D</b>
-        <p>{{ questions[i].options[0] }}</p>
+        <p>{{ questions[i].options[3] }}</p>
         <img />
       </button>
     </div>
-    <button class="submit" (click)="submitAnswer()">Submit Answer</button>
+    <button class="submit" (click)="submitAnswer(i)">Submit Answer</button>
   </div>
 </div>
