@@ -28,10 +28,10 @@ ngOnInit(){
   console.table(this.questions)
   var buttons = document.querySelectorAll('.option');
   var submitBtn = document.querySelector('.submit')
-
-  // Add click event listener to each button
+    // Add click event listener to each button
   buttons.forEach(function(button) {
     button.addEventListener('click', function(e:any) {
+      submitBtn?.removeAttribute('disabled')
       // Remove active class from all buttons
       buttons.forEach(function(btn) {
         btn.classList.remove('active');
