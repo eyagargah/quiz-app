@@ -28,6 +28,7 @@ ngOnInit(){
   console.table(this.questions)
   var buttons = document.querySelectorAll('.option');
   var submitBtn = document.querySelector('.submit')
+  submitBtn?.setAttribute('disabled','')
     // Add click event listener to each button
   buttons.forEach(function(button) {
     button.addEventListener('click', function(e:any) {
