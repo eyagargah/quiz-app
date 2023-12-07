@@ -14,7 +14,6 @@ export class QuizComponent {
   next = false ;
   i=0
   length : any
-  selectedAnswer : any;
   score: any;
 constructor(private quizService : QuizService , private router:Router){}
 
@@ -39,14 +38,23 @@ ngOnInit(){
         console.log(btn)
       });
       // Add active class to the clicked button
-      const selectedBtn = e.target.parentNode
-      selectedBtn.classList.add('active');
+      let selectedAnswer = e.target.parentNode
+      selectedAnswer.classList.add('active');
     });
   });
 }
 
-submitAnswer(){
-  console.log(this.selectedAnswer.lastChild)
+submitAnswer(i:any){
+  let answer = document.querySelector('.active')?.children[1].innerHTML
+  let selectedAnswerBtn = document.querySelector('.active')
+  if(answer == this.questions[i].answer ){
+    selectedAnswerBtn?.classList.remove("active")
+    selectedAnswerBtn?.classList.add('correct')
+  }else {
+    selectedAnswerBtn?.classList.remove("active")
+    selectedAnswerBtn?.classList.add('wrong')
+
+  }
 
 }
 
