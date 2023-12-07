@@ -46,7 +46,7 @@ ngOnInit(){
 }
 
 submitAnswer(){
-  
+  console.log(this.selectedAnswer.lastChild)
 
 }
 
