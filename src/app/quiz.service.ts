@@ -13,14 +13,14 @@ export class QuizService {
   quizzes : any;
 
   setQuizzesData(){
+    localStorage.setItem('data' , JSON.stringify(this.quizzes))
 
   }
-
   getQuizzesData(){
     this.quizzes = quizzesData;
   }
 
-  
+
   setSubjectQuestions(subjectQuestions : any){
     this.questions = subjectQuestions
   }
