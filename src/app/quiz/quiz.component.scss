@@ -11,6 +11,12 @@
     b {
       font-size: 2rem;
     }
+    p {
+      font-size: 1.5rem;
+    }
+    img {
+      align-self: baseline;
+    }
   }
   .optionsSection {
     button {
@@ -42,7 +48,14 @@
           margin:0 0.5rem;
           background-color: #F4F6FA;
         }
-
+        p {
+          font-size: 1.5rem;
+        }
+        img {
+          position: absolute;
+          right: 15rem;
+          top: 12rem;
+        }
       }
 
       button:hover {
@@ -55,6 +68,7 @@
       }
 
       .correct {
+        
         border-color: green;
         img {
           content: url("../../assets/icons/icon-correct.svg");
