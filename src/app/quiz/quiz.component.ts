@@ -9,19 +9,21 @@ import { QuizService } from 'app/quiz.service';
 })
 export class QuizComponent {
   title : any;
+  questionsData: any;
   questions : any;
   icon : any;
   next = false ;
   i=0
   length : any
-  score: any;
+  score= 0;
 constructor(private quizService : QuizService , private router:Router){}
 
 ngOnInit(){
-
   this.title = this.quizService.getTitle()
   this.icon = this.quizService.getIcon()
   this.questions = this.quizService.getSubjectQuestions()
+  //localStorage.setItem('data', JSON.stringify(this.questionsData))
+  //this.questions = JSON.parse(localStorage.getItem('data')!) 
   console.log(this.title)
   console.log(this.icon)
   console.table(this.questions)
@@ -54,15 +56,12 @@ if(submitBtn){
   if(answer == this.questions[i].answer ){
     selectedAnswerBtn?.classList.remove("active")
     selectedAnswerBtn?.classList.add('correct')
+    this.score += 1
   }else {
     selectedAnswerBtn?.classList.remove("active")
     selectedAnswerBtn?.classList.add('wrong')
-
   }
 
 }
 
-calculateScore(){
-  
-}
 }
