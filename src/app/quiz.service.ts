@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-
+import  quizzesData from '../assets/quizes.json';
 @Injectable({
   providedIn: 'root'
 })
@@ -10,6 +10,17 @@ export class QuizService {
   questions : any = []
   title : string | undefined;
   icon : any;
+  quizzes : any;
+
+  setQuizzesData(){
+
+  }
+
+  getQuizzesData(){
+    this.quizzes = quizzesData;
+  }
+
+  
   setSubjectQuestions(subjectQuestions : any){
     this.questions = subjectQuestions
   }
