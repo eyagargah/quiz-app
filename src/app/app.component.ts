@@ -12,6 +12,5 @@ export class AppComponent {
     document.body.classList.toggle('dark-theme');
   }
   ngOnInit(){
-    localStorage.setItem('data' , JSON.stringify(this.data))
   }
 }
