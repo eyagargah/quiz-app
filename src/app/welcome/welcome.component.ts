@@ -14,11 +14,8 @@ export class WelcomeComponent {
    constructor(private router:Router , private quizService : QuizService){}
 
    getQuizQuestions(e:any , i:any){
-    
-    this.quizService.setTitle(this.data[i].title)
-    this.quizService.setIcon(this.data[i].icon)
-    this.questions = this.data[i].questions;
-    this.quizService.setSubjectQuestions(this.questions)
+    this.quizService.setSubjectQuestions(i)
+    console.log(this.quizService.getSubjectQuestions())
     this.router.navigate(['quiz']);
    }
 
