@@ -10,37 +10,26 @@ export class QuizService {
   questions : any = []
   title : string | undefined;
   icon : any;
-  quizzes : any;
+  quizzesData : any;
 
   setQuizzesData(){
-    localStorage.setItem('data' , JSON.stringify(this.quizzes))
+    this.quizzesData = quizzesData;
+    localStorage.setItem('quizzes' , JSON.stringify(this.quizzesData))
 
   }
   getQuizzesData(){
-    this.quizzes = quizzesData;
+    return this.quizzesData;
   }
 
-
-  setSubjectQuestions(subjectQuestions : any){
-    this.questions = subjectQuestions
-  }
-  getSubjectQuestions(){
+ setSubjectQuestions(i:any){
+    this.questions = this.quizzesData.quizzes[i].questions;
+    localStorage.setItem('questions' , JSON.stringify(this.questions))
+ }
+  getSubjectQuestions(){ 
     return this.questions
   }
 
-  setTitle(subjectTitle : any){
-    this.title = subjectTitle
-  }
-  getTitle(){
-    return this.title
-  }
 
-  setIcon(subjectIcon : any){
-    this.icon = subjectIcon
-  }
-  getIcon(){
-    return this.icon
-  }
 
 
 }
