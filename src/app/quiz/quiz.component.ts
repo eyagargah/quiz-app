@@ -16,17 +16,12 @@ export class QuizComponent {
   i=0
   length : any
   score= 0;
-constructor(private quizService : QuizService , private router:Router){}
+  constructor(private quizService : QuizService , private router:Router){}
 
 ngOnInit(){
-  this.title = this.quizService.getTitle()
-  this.icon = this.quizService.getIcon()
-  this.questions = this.quizService.getSubjectQuestions()
-  //localStorage.setItem('data', JSON.stringify(this.questionsData))
-  //this.questions = JSON.parse(localStorage.getItem('data')!) 
-  console.log(this.title)
-  console.log(this.icon)
-  console.table(this.questions)
+  
+  this.questions = JSON.parse(localStorage.getItem('questions')!)
+  console.log(this.questions)
   var buttons = document.querySelectorAll('.option');
   var submitBtn = document.querySelector('.submit')
   submitBtn?.setAttribute('disabled','')
