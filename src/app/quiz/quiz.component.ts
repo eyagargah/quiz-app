@@ -53,6 +53,7 @@ export class QuizComponent {
         this.questions.options[correctAnswerIndex!]
     ) {
       selectedAnswer?.classList.add('correct');
+      this.score+=1
     } else {
       selectedAnswer?.classList.add('wrong');
       if (correctAnswerIndex) {
