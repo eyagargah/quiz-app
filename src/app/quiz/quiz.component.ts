@@ -60,14 +60,16 @@ export class QuizComponent {
           ?.children[correctAnswerIndex].classList.add('correct');
       }
     }
-    console.log(this.i)
-
+    
     document
       .querySelector('.submitBtn')
       ?.addEventListener('click', () =>{
 
         var buttons = document.querySelectorAll('.option');
+        console.log( "before :"+ this.i)
         if(this.i<10){
+        this.i+=1
+
           buttons.forEach(function (button) {
               buttons.forEach(function (btn) {
                 btn.classList.remove('active');
@@ -75,9 +77,10 @@ export class QuizComponent {
                 btn.classList.remove('wrong');
               });
             });
-          this.i+=1
-          this.questions = this.questionsData[this.i]
+            
           
+          this.questions = this.questionsData[this.i]
+          console.log( "after :"+ this.i)
 
         }else if(this.i==10){
           this.router.navigate(['score'])
