@@ -60,12 +60,30 @@ export class QuizComponent {
           ?.children[correctAnswerIndex].classList.add('correct');
       }
     }
+    console.log(this.i)
 
-    if (this.i < 10 ) {
-      this.i += 1;
-      this.questions = this.questionsData[this.i];
-    } else if (this.i == 10) {
-      this.router.navigate(['score']);
-    }
+    document
+      .querySelector('.submitBtn')
+      ?.addEventListener('click', () =>{
+
+        var buttons = document.querySelectorAll('.option');
+        if(this.i<10){
+          buttons.forEach(function (button) {
+              buttons.forEach(function (btn) {
+                btn.classList.remove('active');
+                btn.classList.remove('correct');
+                btn.classList.remove('wrong');
+              });
+            });
+          this.i+=1
+          this.questions = this.questionsData[this.i]
+          
+
+        }else if(this.i==10){
+          this.router.navigate(['score'])
+        }
+      })
   }
+
+
 }
