@@ -60,33 +60,31 @@ export class QuizComponent {
           ?.children[correctAnswerIndex].classList.add('correct');
       }
     }
-    
-    document
-      .querySelector('.submitBtn')
-      ?.addEventListener('click', () =>{
 
+    if (document.querySelector('.submitBtn')?.innerHTML == 'Next Question') {
+      document.querySelector('.submitBtn')?.addEventListener('click', () => {
+        document.querySelector('.submitBtn')?.innerHTML == 'Submit Answer'
         var buttons = document.querySelectorAll('.option');
-        console.log( "before :"+ this.i)
-        if(this.i<10){
-        this.i+=1
+        console.log('before :' + this.i);
+        if (this.i < 10) {
+          this.i += 1;
 
           buttons.forEach(function (button) {
-              buttons.forEach(function (btn) {
-                btn.classList.remove('active');
-                btn.classList.remove('correct');
-                btn.classList.remove('wrong');
-              });
+            buttons.forEach(function (btn) {
+              btn.classList.remove('active');
+              btn.classList.remove('correct');
+              btn.classList.remove('wrong');
             });
-            
+          });
+
+          this.questions = this.questionsData[this.i];
+          console.log('after :' + this.i);
           
-          this.questions = this.questionsData[this.i]
-          console.log( "after :"+ this.i)
-
-        }else if(this.i==10){
-          this.router.navigate(['score'])
+        } else if (this.i == 10) {
+          this.router.navigate(['score']);
         }
-      })
+
+      });
+    }
   }
-
-
 }
