@@ -1,31 +1,31 @@
 <div class="main">
   <div class="question">
     <h1>Question {{ i + 1 }} of 10</h1>
-    <b>{{ questions[i].question }}</b>
+    <b>{{ questions.question }}</b>
   </div>
   <div class="optionsSection">
     <div class="options">
       <button class="option">
         <b>A</b>
-        <p>{{ questions[i].options[0] }}</p>
+        <p>{{ questions.options[0] }}</p>
         <img />
       </button>
       <button class="option">
         <b>B</b>
-        <p>{{ questions[i].options[1] }}</p>
+        <p>{{ questions.options[1] }}</p>
         <img />
       </button>
       <button class="option">
         <b>C</b>
-        <p>{{ questions[i].options[2] }}</p>
+        <p>{{ questions.options[2] }}</p>
         <img />
       </button>
       <button class="option">
         <b>D</b>
-        <p>{{ questions[i].options[3] }}</p>
+        <p>{{ questions.options[3] }}</p>
         <img>
       </button>
     </div>
-    <button class="submit" (click)="submitAnswer(i)">Submit Answer</button>
+    <button class="submitBtn" disabled (click)="submitAnswer()">Submit Answer</button>
   </div>
 </div>
