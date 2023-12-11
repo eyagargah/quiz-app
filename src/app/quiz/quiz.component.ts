@@ -42,8 +42,21 @@ ngOnInit(){
 }
 
 submitAnswer(i:any){
+  var options = document.querySelector('.options')
+
   let answer = document.querySelector('.active')?.children[1].innerHTML
   let submitBtn = document.querySelector('.submit')
+  let correctAnswerIndex ;
+  console.table(this.questions[i].options)
+
+  //optimize this section
+  for(let j=0 ; j<this.questions[i].options.length ; j++){
+    if(this.questions[i].options[j]== this.questions[i].answer){
+      correctAnswerIndex = j 
+    }
+  }
+  console.log(correctAnswerIndex)
+
 if(submitBtn){
   submitBtn.innerHTML = "Next Question"
 
@@ -55,8 +68,12 @@ if(submitBtn){
   }else {
     selectedAnswerBtn?.classList.remove("active")
     selectedAnswerBtn?.classList.add('wrong')
+    if(options && correctAnswerIndex){
+      options.children[correctAnswerIndex].classList.add("correct")
+    }
   }
-
+  
+ i++
 }
 
 }
