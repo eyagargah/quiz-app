@@ -25,9 +25,6 @@ export class QuizComponent {
     buttons.forEach(function (button) {
       button.addEventListener('click', function (e: any) {
         submitBtn?.removeAttribute('disabled');
-        if (submitBtn) {
-          submitBtn.innerHTML = 'Next Question';
-        }
         buttons.forEach(function (btn) {
           btn.classList.remove('active');
         });
@@ -38,6 +35,10 @@ export class QuizComponent {
   }
 
   submitAnswer() {
+    let submitBtn = document.querySelector('.submitBtn')
+    if (submitBtn) {
+      submitBtn.innerHTML = 'Next Question';
+    }
     let selectedAnswer = document.querySelector('.active');
     let correctAnswerIndex;
     for (let j = 0; j < this.questions.options.length; j++) {
@@ -61,30 +62,6 @@ export class QuizComponent {
       }
     }
 
-    if (document.querySelector('.submitBtn')?.innerHTML == 'Next Question') {
-      document.querySelector('.submitBtn')?.addEventListener('click', () => {
-        document.querySelector('.submitBtn')?.innerHTML == 'Submit Answer'
-        var buttons = document.querySelectorAll('.option');
-        console.log('before :' + this.i);
-        if (this.i < 10) {
-          this.i += 1;
 
-          buttons.forEach(function (button) {
-            buttons.forEach(function (btn) {
-              btn.classList.remove('active');
-              btn.classList.remove('correct');
-              btn.classList.remove('wrong');
-            });
-          });
-
-          this.questions = this.questionsData[this.i];
-          console.log('after :' + this.i);
-          
-        } else if (this.i == 10) {
-          this.router.navigate(['score']);
-        }
-
-      });
-    }
   }
 }
