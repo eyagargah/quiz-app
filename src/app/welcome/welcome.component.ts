@@ -15,7 +15,6 @@ export class WelcomeComponent {
 
    getQuizQuestions(e:any , i:any){
     this.quizService.setSubjectQuestions(i)
-    console.log(this.quizService.getSubjectQuestions())
     this.router.navigate(['quiz']);
    }
 
