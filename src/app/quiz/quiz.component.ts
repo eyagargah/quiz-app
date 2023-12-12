@@ -18,20 +18,22 @@ export class QuizComponent {
   constructor(private router: Router) {}
 
   ngOnInit() {
+    let submitBtn = document.querySelector('.submitBtn')
     this.questionsData = JSON.parse(localStorage.getItem('questions')!);
-    this.questions = this.questionsData[this.i];
-    var buttons = document.querySelectorAll('.option');
-    var submitBtn = document.querySelector('.submitBtn');
-    buttons.forEach(function (button) {
-      button.addEventListener('click', function (e: any) {
-        submitBtn?.removeAttribute('disabled');
-        buttons.forEach(function (btn) {
-          btn.classList.remove('active');
-        });
-        let selectedAnswer = e.target.parentNode;
-        selectedAnswer.classList.add('active');
-      });
-    });
+    this.questions = this.questionsData[this.i]
+    
+  }
+
+  nextQuestion(index:any){
+    if(this.i<9){
+      this.i+=1;
+      this.questions = this.questionsData[this.i]
+      console.log(this.i)
+    }else if (this.i == 9){
+      this.router.navigate(['score'])
+    }
+   
+
   }
 
   submitAnswer() {
