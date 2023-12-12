@@ -22,6 +22,16 @@ export class QuizComponent {
     this.questionsData = JSON.parse(localStorage.getItem('questions')!);
     this.questions = this.questionsData[this.i]
     
+    let options = document.querySelectorAll('.option')
+    options.forEach(function(button){
+      button.addEventListener('click', function (e: any) {
+        submitBtn?.removeAttribute('disabled');
+        options.forEach(function (btn) {
+          btn.classList.remove('active');
+        });
+
+    })
+    })
     submitBtn?.addEventListener('click', ()=> {
       if(submitBtn){
         if(submitBtn?.innerHTML=="Submit Answer"){
