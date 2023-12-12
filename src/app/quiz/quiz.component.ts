@@ -70,6 +70,7 @@ export class QuizComponent {
           submitBtn.innerHTML = "Next Question"
         }else {
           if(this.i<9){
+            submitBtn.innerHTML = "Submit Answer"
             this.i+=1;
             this.questions = this.questionsData[this.i]
             options.forEach(function (button) {
@@ -82,7 +83,10 @@ export class QuizComponent {
           }else if (this.i == 9){
             this.router.navigate(['score'])
           }
-          submitBtn.innerHTML = "Submit Answer"
+          else if(this.i==8){
+          submitBtn.innerHTML = "Submit Quiz"
+
+          }
         }
       }
       
