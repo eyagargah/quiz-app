@@ -32,6 +32,7 @@ export class QuizComponent {
 
         
         let selectedAnswer = e.target.parentNode;
+        console.log(selectedAnswer)
         selectedAnswer.classList.add('active');
 
     })
