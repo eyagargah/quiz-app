@@ -7,8 +7,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./quiz.component.scss'],
 })
 export class QuizComponent {
-  options = document.querySelectorAll('.option');
-  submitBtn = document.querySelector('.submitBtn');
+  
   selectedAnswer = document.querySelector('.active');
   title: any;
   questionsData: any;
@@ -19,18 +18,22 @@ export class QuizComponent {
   index: any;
   score = 0;
   correctAnswerIndex: any;
+  options:any
+  submitBtn: any
   
   constructor(private router: Router) {}
 
   ngOnInit() {
-    
+    this.options = document.querySelectorAll('.option');
+    this.submitBtn = document.querySelector('.submitBtn');
+    console.log(this.options)
     this.questionsData = JSON.parse(localStorage.getItem('questions')!);
     this.questions = this.questionsData[this.i];
 
-    this.options.forEach((button) => {
+    this.options.forEach((button: any) => {
       button.addEventListener('click', (e: any) => {
         this.submitBtn?.removeAttribute('disabled');
-        this.options.forEach(function (btn) {
+        this.options.forEach(function (btn: any) {
           btn.classList.remove('active');
         });
 
@@ -108,8 +111,8 @@ export class QuizComponent {
   }
 
   restartQuiz() {
-    this.options.forEach((button) => {
-      this.options.forEach(function (btn) {
+    this.options.forEach((button : any) => {
+      this.options.forEach(function (btn: any) {
         btn.classList.remove('active');
         btn.classList.remove('correct');
         btn.classList.remove('wrong');
