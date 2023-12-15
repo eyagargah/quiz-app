@@ -112,11 +112,7 @@ export class QuizComponent {
   }
 
   restartQuiz() {
-      this.optionsContainer.forEach(function (btn: any) {
-        btn.classList.remove('active');
-        btn.classList.remove('correct');
-        btn.classList.remove('wrong');
-      });
+    
       
     this.options.forEach((button : any) => {
       this.options.forEach(function (btn: any) {
