@@ -20,11 +20,12 @@ export class QuizComponent {
   correctAnswerIndex: any;
   options:any
   submitBtn: any
-  
+  optionsContainer:any
   constructor(private router: Router) {}
 
   ngOnInit() {
     this.options = document.querySelectorAll('.option');
+    this.optionsContainer = document.querySelectorAll('a');
     this.submitBtn = document.querySelector('.submitBtn');
     console.log(this.options)
     this.questionsData = JSON.parse(localStorage.getItem('questions')!);
@@ -111,6 +112,12 @@ export class QuizComponent {
   }
 
   restartQuiz() {
+      this.optionsContainer.forEach(function (btn: any) {
+        btn.classList.remove('active');
+        btn.classList.remove('correct');
+        btn.classList.remove('wrong');
+      });
+      
     this.options.forEach((button : any) => {
       this.options.forEach(function (btn: any) {
         btn.classList.remove('active');
