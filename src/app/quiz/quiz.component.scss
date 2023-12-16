@@ -19,6 +19,7 @@
     }
   }
   .optionsSection {
+   
     button {
       width: 90%;
       margin-bottom: 1rem;
@@ -38,27 +39,40 @@
     .options {
     margin: 0.5rem;
 
-      button {
-        display: flex;
-        align-items: baseline;
-        justify-content: flex-start;
-        b {
-          color: #626C7F;
-          padding: 0.8rem;
-          border-radius: 8px;
-          margin:0 0.5rem;
-          background-color: #F4F6FA;
-        }
-        p {
-          font-size: 1.5rem;
-        }
-        img {
-          margin-right: 0;
-          align-self: center;
-        }
-      }
+    .option {
+      width: 90%;
+      margin-bottom: 1rem;
+      border-color: transparent;
+      padding: 1.2rem 0;
+      border-radius: 15px;
+      text-align: center;
+      transition: all 0.2s ease-in-out;
+      cursor: pointer;
+      outline: none;
+      font-size: 1.7rem;
+      font-weight: 300;
+      display: block;
+      display: flex;
+      align-items: baseline;
+      justify-content: flex-start;
 
-      button:hover {
+      b {
+        color: #626C7F;
+        padding: 0.8rem;
+        border-radius: 8px;
+        margin:0 0.5rem;
+        background-color: #F4F6FA;
+      }
+      p {
+        font-size: 1.5rem;
+      }
+      img {
+        margin-right: 0;
+        align-self: center;
+      }
+    }
+     
+      .option:hover {
         border-color: #7986CB;
         color: #7986CB;
         b {
