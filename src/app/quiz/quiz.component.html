@@ -5,12 +5,13 @@
   </div>
   <div class="optionsSection">
     <div class="options">
-      <a
-        ><button class="option">
-          <b>A</b>
-          <p>{{ questions.options[0] }}</p>
-          <img /></button
-      ></a>
+      <div class="option">
+        <b>A</b>
+        <input type="radio" id="one" autocomplete="off">
+        <label for="one">{{ questions.options[0] }}</label>
+        <img />
+      </div>
+
       <a>
         <button class="option">
           <b>B</b>
