@@ -20,6 +20,9 @@ html, body {
     button {
       background-color: var(--btn-bg-color);
     }
+    .option {
+      background-color: var(--btn-bg-color);
+    }
     .header {
       margin: 3rem;
       display: flex;
@@ -59,6 +62,11 @@ html, body {
     --moon-url:url("./assets/icons/icon-moon-light.svg");
     
     button {
+      background-color: var(--btn-bg-color);
+      color: var(--btn-txt-color);
+    }
+
+    .option {
       background-color: var(--btn-bg-color);
       color: var(--btn-txt-color);
     }
