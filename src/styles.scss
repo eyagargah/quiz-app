@@ -22,6 +22,10 @@ html, body {
     }
     .option {
       background-color: var(--btn-bg-color);
+      color: var(--text-color);
+      label {
+        color: var();
+      }
     }
     .header {
       margin: 3rem;
