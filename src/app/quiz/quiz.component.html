@@ -11,27 +11,24 @@
         <label for="one">{{ questions.options[0] }}</label>
         <img />
       </div>
-
-      <a>
-        <button class="option">
-          <b>B</b>
-          <p>{{ questions.options[1] }}</p>
-          <img /></button
-      ></a>
-      <a>
-        <button class="option">
-          <b>C</b>
-          <p>{{ questions.options[2] }}</p>
-          <img />
-        </button>
-      </a>
-      <a>
-        <button class="option">
-          <b>D</b>
-          <p>{{ questions.options[3] }}</p>
-          <img />
-        </button>
-      </a>
+      <div class="option">
+        <b>B</b>
+        <input type="radio" id="one" autocomplete="off">
+        <label for="one">{{ questions.options[1] }}</label>
+        <img />
+      </div>
+      <div class="option">
+        <b>C</b>
+        <input type="radio" id="one" autocomplete="off">
+        <label for="one">{{ questions.options[2] }}</label>
+        <img />
+      </div>
+      <div class="option">
+        <b>D</b>
+        <input type="radio" id="one" autocomplete="off">
+        <label for="one">{{ questions.options[3] }}</label>
+        <img />
+      </div>
     </div>
     <button class="submitBtn" disabled>Submit Answer</button>
   </div>
