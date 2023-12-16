@@ -78,6 +78,7 @@
       }
 
       .option:hover {
+        border: solid 2px;
         border-color: #7986cb;
         color: #7986cb;
         b {
@@ -100,6 +101,7 @@
         }
       }
       .active {
+        
         border-color: #7986cb;
         color: #7986cb;
         b {
