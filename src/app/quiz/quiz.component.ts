@@ -25,7 +25,6 @@ export class QuizComponent {
 
   ngOnInit() {
     this.options = document.querySelectorAll('.option');
-    this.optionsContainer = document.querySelectorAll('a');
     this.submitBtn = document.querySelector('.submitBtn');
     console.log(this.options)
     this.questionsData = JSON.parse(localStorage.getItem('questions')!);
