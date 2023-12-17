@@ -45,8 +45,6 @@ export class QuizComponent {
     this.submitBtn?.addEventListener('click', () => {
       this.correctAnswerIndex = this.getCorrectAnswerIndex()
       this.checkAnswer(this.correctAnswerIndex , this.selectedAnswer)
-      console.log("correct answer " + this.questions.options[this.correctAnswerIndex])
-      console.log(this.selectedAnswer)
     });
 
   }
@@ -80,7 +78,6 @@ export class QuizComponent {
               ?.children[correctAnswerIndex].classList.add('correct');
           }
         }
-
         this.submitBtn.innerHTML = 'Next Question';
       } else {
         if (this.i < 9) {
@@ -111,8 +108,7 @@ export class QuizComponent {
   }
 
   restartQuiz() {
-    
-      
+ 
     this.options.forEach((button : any) => {
       this.options.forEach(function (btn: any) {
         btn.classList.remove('active');
