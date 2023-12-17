@@ -26,7 +26,6 @@ export class QuizComponent {
   ngOnInit() {
     this.options = document.querySelectorAll('.option');
     this.submitBtn = document.querySelector('.submitBtn');
-    console.log(this.options)
     this.questionsData = JSON.parse(localStorage.getItem('questions')!);
     this.questions = this.questionsData[this.i];
 
@@ -38,6 +37,7 @@ export class QuizComponent {
         });
 
         this.selectedAnswer = e.target.parentNode;
+        console.log(this.selectedAnswer?.children[2])
         this.selectedAnswer?.classList.add('active');
       });
     });
@@ -65,7 +65,7 @@ export class QuizComponent {
       if (this.submitBtn?.innerHTML == 'Submit Answer') {
         if (
           correctAnswerIndex &&
-          selectedAnswer?.children[1].innerHTML ==
+          selectedAnswer?.children[2].innerHTML ==
             this.questions.options[correctAnswerIndex!]
         ) {
           selectedAnswer?.classList.add('correct');
