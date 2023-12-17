@@ -64,7 +64,7 @@ export class QuizComponent {
       if (this.submitBtn?.innerHTML == 'Submit Answer') {
         if (
           correctAnswerIndex &&
-          selectedAnswer?.children[2].innerHTML ==
+          selectedAnswer?.children[2].textContent ==
             this.questions.options[correctAnswerIndex!]
         ) {
           selectedAnswer?.classList.add('correct');
