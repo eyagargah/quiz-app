@@ -43,7 +43,6 @@ export class QuizComponent {
 
     this.submitBtn?.addEventListener('click', () => {
       this.correctAnswerIndex = this.getCorrectAnswerIndex()
-      console.log("selected Answer :" + this.selectedAnswer?.children[2].textContent)
       this.checkAnswer(this.correctAnswerIndex , this.selectedAnswer)
     });
 
