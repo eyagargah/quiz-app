@@ -37,13 +37,13 @@ export class QuizComponent {
         });
 
         this.selectedAnswer = e.target.parentNode;
-        console.log(this.selectedAnswer?.children[2])
         this.selectedAnswer?.classList.add('active');
       });
     });
 
     this.submitBtn?.addEventListener('click', () => {
       this.correctAnswerIndex = this.getCorrectAnswerIndex()
+      console.log(this.questions.options[this.correctAnswerIndex])
       this.checkAnswer(this.correctAnswerIndex , this.selectedAnswer)
     });
 
