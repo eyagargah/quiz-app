@@ -38,6 +38,8 @@ export class QuizComponent {
 
         this.selectedAnswer = e.target.parentNode;
         this.selectedAnswer?.classList.add('active');
+        console.log("correct Answer :" + this.questions.options[this.correctAnswerIndex])
+      console.log("selected Answer :" + this.selectedAnswer?.children[2].textContent)
       });
     });
 
