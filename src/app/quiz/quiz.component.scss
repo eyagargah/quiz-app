@@ -100,14 +100,17 @@
           content: url("../../assets/icons/icon-correct.svg");
         }
       }
+
+
       .active {
-        
+        border: solid 2px;
         border-color: #7986cb;
         color: #7986cb;
         b {
           background-color: rgb(122, 136, 204, 0.5);
         }
       }
+      
       .wrong {
         border-color: red;
         b {
