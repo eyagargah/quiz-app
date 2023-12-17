@@ -38,14 +38,15 @@ export class QuizComponent {
 
         this.selectedAnswer = e.target.parentNode;
         this.selectedAnswer?.classList.add('active');
-        console.log("correct Answer :" + this.questions.options[this.correctAnswerIndex])
-      console.log("selected Answer :" + this.selectedAnswer?.children[2].textContent)
+        
       });
     });
 
     this.submitBtn?.addEventListener('click', () => {
       this.correctAnswerIndex = this.getCorrectAnswerIndex()
       this.checkAnswer(this.correctAnswerIndex , this.selectedAnswer)
+      console.log("correct Answer :" + this.questions.options[this.correctAnswerIndex])
+        console.log("selected Answer :" + this.selectedAnswer?.children[2].textContent)
     });
 
   }
@@ -67,7 +68,7 @@ export class QuizComponent {
         if (
           correctAnswerIndex &&
           selectedAnswer?.children[2].textContent ==
-            this.questions.options[correctAnswerIndex!]
+            this.questions.options[correctAnswerIndex].textContent
         ) {
           selectedAnswer?.classList.add('correct');
           this.score += 1;
