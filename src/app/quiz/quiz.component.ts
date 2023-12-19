@@ -66,19 +66,11 @@ export class QuizComponent {
       if (this.submitBtn?.innerHTML == 'Submit Answer') {
         if (
           correctAnswerIndex &&
-          selectedAnswer?.children[2].textContent ==
-            this.questions.options[correctAnswerIndex].textContent
+          selectedAnswer?.index ==
+            correctAnswerIndex
         ) {
-          selectedAnswer?.classList.add('correct');
-          this.score += 1;
-        } else {
-          selectedAnswer?.classList.add('wrong');
-          if (correctAnswerIndex) {
-            document
-              .querySelector('.options')
-              ?.children[correctAnswerIndex].classList.add('correct');
-          }
-        }
+          console.log('true')
+        } 
         this.submitBtn.innerHTML = 'Next Question';
       } else {
         if (this.i < 9) {
