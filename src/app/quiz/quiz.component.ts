@@ -46,7 +46,7 @@ export class QuizComponent {
       this.correctAnswerIndex = this.getCorrectAnswerIndex()
       this.checkAnswer(this.correctAnswerIndex , this.selectedAnswer)
       console.log("correct Answer :" + this.questions.options[this.correctAnswerIndex])
-        console.log("selected Answer :" + this.selectedAnswer?.children[2].textContent)
+      console.log("selected Answer :" + this.selectedAnswer?.children[2].textContent)
     });
 
   }
@@ -55,7 +55,6 @@ export class QuizComponent {
     if (this.i < 9) {
       this.i += 1;
       this.questions = this.questionsData[this.i];
-      console.log(this.i);
     } else if (this.i == 9) {
       this.router.navigate(['score']);
     }
