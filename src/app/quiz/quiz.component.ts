@@ -61,7 +61,14 @@ export class QuizComponent {
 
   checkAnswer( correctAnswerIndex : any , selectedAnswer : any) {
     if (this.submitBtn?.innerHTML == 'Submit Answer') {
-      console.log(selectedAnswer)
+      if(selectedAnswer.children[1].id == correctAnswerIndex){
+       selectedAnswer.classList.add('correct')
+      }
+      else {
+        selectedAnswer.classList.add('wrong')
+        document.querySelector('.options')?.children[correctAnswerIndex].classList.add('correct')
+       
+      }
     }
   }
 
