@@ -60,7 +60,9 @@ export class QuizComponent {
 
 
   checkAnswer( correctAnswerIndex : any , selectedAnswer : any) {
-   
+    if (this.submitBtn?.innerHTML == 'Submit Answer') {
+      console.log(selectedAnswer)
+    }
   }
 
 
