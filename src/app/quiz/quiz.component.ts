@@ -45,8 +45,6 @@ export class QuizComponent {
     this.submitBtn?.addEventListener('click', () => {
       this.correctAnswerIndex = this.getCorrectAnswerIndex()
       this.checkAnswer(this.correctAnswerIndex , this.selectedAnswer)
-      console.log("correct Answer :" + this.questions.options[this.correctAnswerIndex])
-      console.log("selected Answer :" + this.selectedAnswer?.children[2].textContent)
     });
 
   }
@@ -66,8 +64,8 @@ export class QuizComponent {
       if (this.submitBtn?.innerHTML == 'Submit Answer') {
         if (
           correctAnswerIndex &&
-          selectedAnswer?.index ==
-            correctAnswerIndex
+          selectedAnswer?.children[2].innerHTML ==
+          this.questions.options[correctAnswerIndex].innerHTML
         ) {
           console.log('true')
         } 
@@ -86,6 +84,8 @@ export class QuizComponent {
       }
     }
   }
+
+  
   increaseScore(score: any) {
     score += 1;
   }
