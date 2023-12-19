@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { QuizService } from 'app/quiz.service';
 
 @Component({
   selector: 'app-quiz',
@@ -21,7 +22,7 @@ export class QuizComponent {
   options:any
   submitBtn: any
   optionsContainer:any
-  constructor(private router: Router) {}
+  constructor(private router: Router , private quizService : QuizService) {}
 
   ngOnInit() {
     this.options = document.querySelectorAll('.option');
@@ -64,6 +65,8 @@ export class QuizComponent {
       if(selectedAnswer.children[1].id == correctAnswerIndex){
        selectedAnswer.classList.add('correct')
        this.increaseScore(this.score)
+        this.quizService.setScore(this.score)
+
       }
       else {
         selectedAnswer.classList.add('wrong')
