@@ -60,32 +60,10 @@ export class QuizComponent {
 
 
   checkAnswer( correctAnswerIndex : any , selectedAnswer : any) {
-    if (this.submitBtn) {
-      if (this.submitBtn?.innerHTML == 'Submit Answer') {
-        if (
-          correctAnswerIndex &&
-          selectedAnswer?.children[2].innerHTML ==
-          this.questions.options[correctAnswerIndex].innerHTML
-        ) {
-          console.log('true')
-        } 
-        this.submitBtn.innerHTML = 'Next Question';
-      } else {
-        if (this.i < 9) {
-          this.submitBtn.innerHTML = 'Submit Answer';
-          this.i += 1;
-          this.questions = this.questionsData[this.i];
-         this.restartQuiz()
-        } else if (this.i == 9) {
-          this.router.navigate(['score']);
-        } else if (this.i == 8) {
-          this.submitBtn.innerHTML = 'Submit Quiz';
-        }
-      }
-    }
+   
   }
 
-  
+
   increaseScore(score: any) {
     score += 1;
   }
