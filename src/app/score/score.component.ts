@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { QuizService } from 'app/quiz.service';
 
 @Component({
   selector: 'app-score',
@@ -6,5 +7,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./score.component.scss']
 })
 export class ScoreComponent {
+  score:any
+constructor(private quizService : QuizService){}
 
+ngOnInit(){
+  this.score = this.quizService.getScore()
+  console.log(this.score)
+}
 }
