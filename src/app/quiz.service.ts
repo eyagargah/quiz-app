@@ -11,7 +11,7 @@ export class QuizService {
   title : string | undefined;
   icon : any;
   quizzesData : any;
-
+  score : any;
   setQuizzesData(){
     this.quizzesData = quizzesData;
     localStorage.setItem('quizzes' , JSON.stringify(this.quizzesData))
@@ -29,7 +29,12 @@ export class QuizService {
     return this.questions
   }
 
-
+getScore(){
+  return this.score
+}
+setScore(currentScore : any){
+  this.score = currentScore
+}
 
 
 }
