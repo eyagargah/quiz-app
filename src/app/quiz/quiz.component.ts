@@ -69,8 +69,21 @@ export class QuizComponent {
         document.querySelector('.options')?.children[correctAnswerIndex].classList.add('correct')
        
       }
+      this.submitBtn.innerHTML = 'Next Question'
+    }else {
+      if (this.i < 9) {
+        this.submitBtn.innerHTML = 'Submit Answer';
+        this.i += 1;
+        this.questions = this.questionsData[this.i];
+       this.restartQuiz()
+      } else if (this.i == 9) {
+        this.router.navigate(['score']);
+      } else if (this.i == 8) {
+        this.submitBtn.innerHTML = 'Submit Quiz';
+      }
     }
-  }
+    }
+  
 
 
   increaseScore(score: any) {
