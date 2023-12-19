@@ -64,7 +64,7 @@ export class QuizComponent {
     if (this.submitBtn?.innerHTML == 'Submit Answer') {
       if(selectedAnswer.children[1].id == correctAnswerIndex){
        selectedAnswer.classList.add('correct')
-       this.increaseScore(this.score)
+        this.score+=1
         this.quizService.setScore(this.score)
 
       }
