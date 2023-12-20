@@ -1,4 +1,37 @@
 .main {
+    margin: 6rem 4rem;
     display: flex;
-    gap: 5rem;
+    
+    .left {
+        width: 50%;
+        p , b {
+            font-size: 4rem;
+        }
+        p {
+            margin-bottom: 3rem;
+        }
+        
+    }
+    .right {
+        width: 50%;
+        height: auto;
+        .scoreCard {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            .icon {
+                display: flex;
+                align-items: center;
+                p {
+                    font-size: 2rem;
+                }
+            }
+            width: 80%;
+            border: solid black 1px;
+            border-radius: 8px;
+            b {
+                font-size: 9rem;
+            }
+        }
+    }
 }
