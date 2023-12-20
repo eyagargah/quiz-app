@@ -20,17 +20,26 @@
             display: flex;
             flex-direction: column;
             .icon {
+                border: solid black 1px;
+                padding: 1rem;
+                font-size: 1rem;
                 display: flex;
                 align-items: center;
-                p {
-                    font-size: 2rem;
-                }
             }
             width: 80%;
             border: solid black 1px;
             border-radius: 8px;
             b {
+                border: solid black 1px;
                 font-size: 9rem;
+                align-self: center;
+                margin-bottom: 2rem;
+            }
+            p{
+                border: solid black 1px;
+                font-size: 3rem;
+                align-self: center;
+                margin-top: 5rem;
             }
         }
     }
