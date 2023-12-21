@@ -36,5 +36,12 @@ setScore(currentScore : any){
   this.score = currentScore
 }
 
+getTitle(){
+  return this.title
+}
+
+getIcon(){
+  return this.icon
+}
 
 }
