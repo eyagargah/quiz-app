@@ -14,4 +14,8 @@ ngOnInit(){
   this.score = this.quizService.getScore()
   console.log(this.score)
 }
+
+playAgain(){
+  
+}
 }
