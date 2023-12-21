@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { QuizService } from 'app/quiz.service';
 
 @Component({
@@ -8,7 +9,7 @@ import { QuizService } from 'app/quiz.service';
 })
 export class ScoreComponent {
   score:any
-constructor(private quizService : QuizService){}
+constructor(private quizService : QuizService , private router:Router){}
 
 ngOnInit(){
   this.score = this.quizService.getScore()
@@ -16,6 +17,6 @@ ngOnInit(){
 }
 
 playAgain(){
-  
+this.router.navigate(['/'])
 }
 }
