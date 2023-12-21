@@ -40,8 +40,16 @@ getTitle(){
   return this.title
 }
 
+setTitle( title:any){
+  this.title = title
+}
+
 getIcon(){
   return this.icon
+}
+
+setIcon(icon:any){
+  this.icon = icon
 }
 
 }
