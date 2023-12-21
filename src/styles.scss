@@ -27,6 +27,10 @@ html, body {
         color: var();
       }
     }
+    .scoreCard {
+      background-color: var(--btn-bg-color);
+      color: var(--btn-txt-color);
+    }
     .header {
       margin: 3rem;
       display: flex;
@@ -71,6 +75,10 @@ html, body {
     }
 
     .option {
+      background-color: var(--btn-bg-color);
+      color: var(--btn-txt-color);
+    }
+    .scoreCard {
       background-color: var(--btn-bg-color);
       color: var(--btn-txt-color);
     }
