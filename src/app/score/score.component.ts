@@ -18,9 +18,6 @@ ngOnInit(){
   this.title = this.quizService.getTitle()
   this.icon = this.quizService.getIcon()
 
-  console.log(this.score)
-  console.log(this.icon)
-  console.log(this.title)
 }
 
 playAgain(){
