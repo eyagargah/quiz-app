@@ -29,10 +29,10 @@ export class QuizComponent {
     this.submitBtn = document.querySelector('.submitBtn');
     this.questionsData = JSON.parse(localStorage.getItem('questions')!);
     this.questions = this.questionsData[this.i];
-    this.quizService.setTitle(this.questions.title)
-    this.quizService.setIcon(this.questions.icon)
-    console.log(this.questionsData)
-    console.log(this.title)
+    
+    this.icon= this.quizService.getIcon()
+    this.title = this.quizService.getTitle()
+    console.log( this.icon + ' ' + this.title)
     this.options.forEach((button: any) => {
       button.addEventListener('click', (e: any) => {
         this.submitBtn?.removeAttribute('disabled');
