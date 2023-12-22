@@ -8,6 +8,8 @@ import { QuizService } from './quiz.service';
 })
 export class AppComponent {
   title = 'quiz-app';
+  quizTitle:any
+  icon:any
   data = quizzesData.quizzes;
   constructor(private quizService : QuizService){}
   toggleDarkTheme(): void {
@@ -15,5 +17,10 @@ export class AppComponent {
   }
   ngOnInit(){
     this.quizService.setQuizzesData ()
+  }
+
+  getTitleAndIcon(){
+    this.icon = this.quizService.getIcon()
+    this.quizTitle = this.quizService.getTitle()
   }
 }
