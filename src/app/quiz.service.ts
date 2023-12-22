@@ -24,6 +24,8 @@ export class QuizService {
  setSubjectQuestions(i:any){
     this.questions = this.quizzesData.quizzes[i].questions;
     localStorage.setItem('questions' , JSON.stringify(this.questions))
+    this.setIcon(this.quizzesData.quizzes[i].icon)
+    this.setTitle(this.quizzesData.quizzes[i].title)
  }
   getSubjectQuestions(){ 
     return this.questions
