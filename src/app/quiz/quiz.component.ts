@@ -77,9 +77,11 @@ export class QuizComponent {
        
       }
       this.submitBtn.innerHTML = 'Next Question'
+      
     }else {
       if (this.i < 9) {
         this.submitBtn.innerHTML = 'Submit Answer';
+        this.submitBtn.setAttribute('disabled','')
         this.i += 1;
         this.questions = this.questionsData[this.i];
        this.restartQuiz()
