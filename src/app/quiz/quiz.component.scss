@@ -5,11 +5,14 @@
   .question {
     margin-top: 2rem;
     width: 50%;
+    
     h1 {
       margin-bottom: 2rem;
     }
     b {
       font-size: 2rem;
+      border: 1px solid black;
+      line-height: 2rem;
     }
     p {
       font-size: 1.5rem;
