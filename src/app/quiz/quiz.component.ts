@@ -23,8 +23,9 @@ export class QuizComponent {
   submitBtn: any
   optionsContainer:any
   constructor(private router: Router , private quizService : QuizService) {}
-
+  header : any
   ngOnInit() {
+    this.header = document.querySelector('.header')
     this.options = document.querySelectorAll('.option');
     this.submitBtn = document.querySelector('.submitBtn');
     this.questionsData = JSON.parse(localStorage.getItem('questions')!);
@@ -32,7 +33,10 @@ export class QuizComponent {
     
     this.icon= this.quizService.getIcon()
     this.title = this.quizService.getTitle()
-    console.log( this.icon + ' ' + this.title)
+    this.header.children[0].children[0].src = "assets/icons/"+ this.icon
+    this.header.children[0].children[1].innerHTML = this.title
+    
+    console.log(this.header.children[0])
     this.options.forEach((button: any) => {
       button.addEventListener('click', (e: any) => {
         this.submitBtn?.removeAttribute('disabled');
