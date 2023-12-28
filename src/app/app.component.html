@@ -1,7 +1,7 @@
 <div class="header">
-  <div class="subjectIcon" *ngIf="quizTitle && icon">
+  <div class="subjectIcon" *ngIf="title!=null && icon!=null">
     <img src='{{ "assets/icons/" + icon }}'>
-    {{quizTitle}}
+    <b>{{quizTitle}}</b>
   </div>
   <div class="themeSwitch">
     <img class="lightMode" />
