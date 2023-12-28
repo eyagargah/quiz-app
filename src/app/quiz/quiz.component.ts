@@ -27,6 +27,7 @@ export class QuizComponent {
   subjectIcon: any
   ngOnInit() {
     this.header = document.querySelector('.header')
+    this.subjectIcon = this.header.children[0]
     this.options = document.querySelectorAll('.option');
     this.submitBtn = document.querySelector('.submitBtn');
     this.questionsData = JSON.parse(localStorage.getItem('questions')!);
@@ -36,7 +37,7 @@ export class QuizComponent {
     this.title = this.quizService.getTitle()
     
     
-    console.log(this.header)
+    console.log(this.subjectIcon.children[0])
     this.options.forEach((button: any) => {
       button.addEventListener('click', (e: any) => {
         this.submitBtn?.removeAttribute('disabled');
