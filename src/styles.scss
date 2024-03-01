@@ -37,7 +37,11 @@ html, body {
       gap: 2%;
       flex-direction: row;
       justify-content: flex-end;
+      align-items: baseline;
   
+      .subjectIcon {
+        align-items: baseline;
+      }
       .themeSwitch {
         width: 12%;
         display: flex;
