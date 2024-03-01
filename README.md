@@ -30,6 +30,3 @@ To get started with this project, follow these steps:
 ## Credits
 
 This project was developed as part of the Frontend Mentor challenge. Design mockup and assets provided by Frontend Mentor.
-
-## License
-
