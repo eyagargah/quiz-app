@@ -33,4 +33,3 @@ This project was developed as part of the Frontend Mentor challenge. Design mock
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
