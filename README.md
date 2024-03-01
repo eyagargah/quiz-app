@@ -10,7 +10,8 @@ This project is a quiz app developed to test your knowledge. Users can answer mu
 
 ## Technologies Used
 
-- Angular
+- HTML5/CSS3 for frontend development
+- Angular JS framework for application structure, routing, data binding, etc.
 
 ## Getting Started
 
