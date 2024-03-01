@@ -1,6 +1,6 @@
 # Quiz App
 
-This project is a quiz app developed using Angular. Users can answer multiple-choice questions and see their score at the end. The app also displays the correct answers and provides feedback on each question.
+This project is a quiz app developed to test your knowledge. Users can answer multiple-choice questions and see their score at the end. The app also displays the correct answers and provides feedback on each question.
 
 ## Features
 
