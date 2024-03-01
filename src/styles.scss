@@ -1,91 +1,93 @@
-html, body {
-    height: 100%;
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background-image: url("./assets/pattern-background-desktop-light.svg");
+  --text-color: #222;
+  --bkg-color: #f4f6fa;
+  --btn-txt-color: #313e51;
+  --btn-bg-color: white;
+  --sun-url: url("./assets/icons/icon-sun-dark.svg");
+  --moon-url: url("./assets/icons/icon-moon-dark.svg");
+  margin: 4rem;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  color: var(--text-color);
+  background-color: var(--bkg-color);
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: var(--text-color);
+  button {
+    background-color: var(--btn-bg-color);
   }
-  
-  body {
-    background-image: url("./assets/pattern-background-desktop-light.svg");
-    --text-color: #222;
-    --bkg-color: #F4F6FA;
-    --btn-txt-color: #313E51;
-    --btn-bg-color: white;
-    --sun-url:url("./assets/icons/icon-sun-dark.svg");
-    --moon-url:url("./assets/icons/icon-moon-dark.svg");
-    margin: 4rem;
-    font-family: Roboto, "Helvetica Neue", sans-serif;
+  .option {
+    background-color: var(--btn-bg-color);
     color: var(--text-color);
-    background-color: var(--bkg-color);
-    background-repeat: no-repeat;
-    background-size: cover;
-    color: var(--text-color);
-    button {
-      background-color: var(--btn-bg-color);
+    label {
+      color: var();
     }
-    .option {
-      background-color: var(--btn-bg-color);
-      color: var(--text-color);
-      label {
-        color: var();
-      }
-    }
-    .scoreCard {
-      background-color: var(--btn-bg-color);
-      color: var(--btn-txt-color);
-    }
-    .header {
+  }
+  .scoreCard {
+    background-color: var(--btn-bg-color);
+    color: var(--btn-txt-color);
+  }
+  .header {
+    margin: 3rem;
+    display: flex;
+    gap: 2%;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: baseline;
+
+    .subjectIcon {
       margin: 3rem;
       display: flex;
       gap: 2%;
       flex-direction: row;
       justify-content: flex-end;
       align-items: baseline;
-  
-      .subjectIcon {
-        align-items: baseline;
-      }
-      .themeSwitch {
-        width: 12%;
-        display: flex;
-        justify-content: space-evenly;
-        .themeChange{
-          cursor: pointer;
-          transform: scale(1.5);
-        }
-        .lightMode {
-          content: var(--sun-url);
-        }
-        .darkMode {
-          content : var(--moon-url);
-        }
-      }
-
-      }
-     
-  }
-  
-  .dark-theme {
-    background-image: url("./assets/pattern-background-desktop-dark.svg") ;
-    background-repeat: no-repeat;
-    background-size: cover;
-    --text-color: #eee;
-    --bkg-color: #313E51;
-    --btn-txt-color: white;
-    --btn-bg-color: #3B4D66;
-    --sun-url:url("./assets/icons/icon-sun-light.svg");
-    --moon-url:url("./assets/icons/icon-moon-light.svg");
-    
-    button {
-      background-color: var(--btn-bg-color);
-      color: var(--btn-txt-color);
     }
-
-    .option {
-      background-color: var(--btn-bg-color);
-      color: var(--btn-txt-color);
-    }
-    .scoreCard {
-      background-color: var(--btn-bg-color);
-      color: var(--btn-txt-color);
+    .themeSwitch {
+      width: 12%;
+      display: flex;
+      justify-content: space-evenly;
+      .themeChange {
+        cursor: pointer;
+        transform: scale(1.5);
+      }
+      .lightMode {
+        content: var(--sun-url);
+      }
+      .darkMode {
+        content: var(--moon-url);
+      }
     }
   }
-  
-  
+}
+
+.dark-theme {
+  background-image: url("./assets/pattern-background-desktop-dark.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  --text-color: #eee;
+  --bkg-color: #313e51;
+  --btn-txt-color: white;
+  --btn-bg-color: #3b4d66;
+  --sun-url: url("./assets/icons/icon-sun-light.svg");
+  --moon-url: url("./assets/icons/icon-moon-light.svg");
+
+  button {
+    background-color: var(--btn-bg-color);
+    color: var(--btn-txt-color);
+  }
+
+  .option {
+    background-color: var(--btn-bg-color);
+    color: var(--btn-txt-color);
+  }
+  .scoreCard {
+    background-color: var(--btn-bg-color);
+    color: var(--btn-txt-color);
+  }
+}
