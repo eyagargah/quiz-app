@@ -63,14 +63,15 @@
       h2 {
         font-size: 2rem;
         margin-top: 1rem;
-        margin-bottom: 3rem;
         line-height: 2.5rem;
         font-weight: 100;
+        margin-bottom: 0;
       }
       em {
         font-size: 1.5rem;
-        
       }
+      margin-bottom: 2rem;
+
     } 
     .subjects {
       border: solid 2px black;
@@ -79,7 +80,6 @@
       width: 100%;
    
       button {
-          //color: #313e51;
           margin: 1rem;
     
       }
