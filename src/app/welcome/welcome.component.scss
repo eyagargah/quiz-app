@@ -79,13 +79,11 @@
       border: solid 2px black;
       display: flex;
       flex-direction: column;
-      width: 50%;
+      width: 100%;
    
       button {
           //color: #313e51;
-          display: flex;
-          align-items: center;
-          justify-content: flex-start;
+         
           width: 90%;
           margin-bottom: 1rem;
           border: none;
