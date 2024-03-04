@@ -53,14 +53,14 @@
   .main {
     display: flex;
     justify-content: space-between;
-    flex-direction: row;
+    flex-direction: column;
     margin: 3rem;
+    border: solid 2px black;
     
     margin-top: 8rem;
     height: 60%;
     .welcome {
-      border: solid 2px black;
-      width: 50%;
+      width: 100%;
   
       h2 {
         font-size: 4rem;
@@ -72,7 +72,6 @@
       }
       em {
         font-size: 1.5rem;
-        //color: lightslategray;
         
       }
     } 
