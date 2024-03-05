@@ -1,17 +1,15 @@
 .main {
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
-  margin: 4rem;
   .question {
     margin-top: 2rem;
-    width: 45%;
-    
+     
     h1 {
       margin-bottom: 2rem;
     }
     b {
       font-size: 2rem;
-      width: 70%;
       margin:  0 2rem 0 0;
       letter-spacing: 3px;
       line-height: 2.5rem;
@@ -25,7 +23,6 @@
   }
   .optionsSection {
     button {
-      width: 90%;
       margin-bottom: 1rem;
       border-color: transparent;
       padding: 1.2rem 0;
@@ -38,7 +35,6 @@
       font-weight: 300;
       display: block;
     }
-    width: 50%;
     .options {
       margin: 0.5rem;
 
@@ -127,8 +123,148 @@
       }
     }
     .submitBtn {
+      margin-left: 20%;
       background-color: #7986cb;
       text-align: center;
     }
   }
+}
+
+
+@media screen and ( min-width:770px) {
+  .main {
+    display: flex;
+    justify-content: space-between;
+    margin: 4rem;
+    .question {
+      margin-top: 2rem;
+      width: 45%;
+      
+      h1 {
+        margin-bottom: 2rem;
+      }
+      b {
+        font-size: 2rem;
+        width: 70%;
+        margin:  0 2rem 0 0;
+        letter-spacing: 3px;
+        line-height: 2.5rem;
+      }
+      p {
+        font-size: 1.5rem;
+      }
+      img {
+        align-self: baseline;
+      }
+    }
+    .optionsSection {
+      button {
+        width: 90%;
+        margin-bottom: 1rem;
+        border-color: transparent;
+        padding: 1.2rem 0;
+        border-radius: 15px;
+        text-align: center;
+        transition: all 0.2s ease-in-out;
+        cursor: pointer;
+        outline: none;
+        font-size: 1.7rem;
+        font-weight: 300;
+        display: block;
+      }
+      width: 50%;
+      .options {
+        margin: 0.5rem;
+  
+        .option {
+          width: 90%;
+          margin-bottom: 1rem;
+          border-color: transparent;
+          padding: 1.2rem 0;
+          border-radius: 15px;
+          text-align: center;
+          transition: all 0.2s ease-in-out;
+          cursor: pointer;
+          outline: none;
+          font-size: 1.7rem;
+          font-weight: 300;
+          display: block;
+          display: flex;
+          align-items: baseline;
+          justify-content: flex-start;
+  
+          input {
+            visibility: hidden;
+          }
+          label {
+            font-size: 1.7rem;
+            font-weight: 500;
+          }
+          b {
+            color: #626c7f;
+            padding: 0.8rem;
+            border-radius: 8px;
+            margin: 0 0.5rem;
+            background-color: #f4f6fa;
+          }
+          p {
+            font-size: 1.5rem;
+          }
+          img {
+            margin-right: 0;
+            align-self: center;
+          }
+        }
+  
+        .option:hover {
+          border: solid 2px;
+          border-color: #7986cb;
+          color: #7986cb;
+          b {
+            background-color: rgb(122, 136, 204, 0.5);
+          }
+        }
+  
+        .disabled {
+          cursor: not-allowed;
+        }
+  
+        .correct {
+          border-color: green;
+          b {
+            background-color: green;
+          }
+  
+          img {
+            content: url("../../assets/icons/icon-correct.svg");
+          }
+        }
+  
+  
+        .active {
+          border: solid 2px;
+          border-color: #7986cb;
+          color: #7986cb;
+          b {
+            background-color: rgb(122, 136, 204, 0.5);
+          }
+        }
+        
+        .wrong {
+          border-color: red;
+          b {
+            background-color: red;
+          }
+          img {
+            content: url("../../assets/icons/icon-error.svg");
+          }
+        }
+      }
+      .submitBtn {
+        background-color: #7986cb;
+        text-align: center;
+      }
+    }
+  }
+  
 }
