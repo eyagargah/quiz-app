@@ -2,16 +2,20 @@ html,
 body {
   height: 100%;
 }
-
+@media screen and (min-width: 770px) {
+  body {
+    margin: 4rem;
+  }
+}
 body {
   background-image: url("./assets/pattern-background-desktop-light.svg");
+  margin: 1rem;
   --text-color: #222;
   --bkg-color: #f4f6fa;
   --btn-txt-color: #313e51;
   --btn-bg-color: white;
   --sun-url: url("./assets/icons/icon-sun-dark.svg");
   --moon-url: url("./assets/icons/icon-moon-dark.svg");
-  margin: 4rem;
   font-family: Roboto, "Helvetica Neue", sans-serif;
   color: var(--text-color);
   background-color: var(--bkg-color);
