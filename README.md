@@ -4,9 +4,17 @@ This project is a quiz app developed to test your knowledge. Users can answer mu
 
 ## Features
 
-- Users can answer multiple-choice questions
-- Users can see their score at the end
-- App displays correct answers and provides feedback on each question
+- Users are able to  :
+
+-Select a quiz subject
+-Select a single answer from each question from a choice of four
+-See if they have made a correct or incorrect choice when they submit an answer
+-Move on to the next question after seeing the question result
+-See a completed state with the score after the final question
+-Play again to choose another subject
+-View the optimal layout for the interface depending on their device's screen size
+-See hover and focus states for all interactive elements on the page
+-Change the app's theme between light and dark
 
 ## Technologies Used
 
