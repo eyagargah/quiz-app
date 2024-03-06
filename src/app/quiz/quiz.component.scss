@@ -1,23 +1,23 @@
-@media screen and (max-width:768px) {
+@media screen and (max-width: 768px) {
   .main {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    width: 100%;
     .question {
       margin-top: 2rem;
-       
+
       h1 {
-        margin-bottom: 2rem;
+        font-size: 5vw;
       }
       b {
-        font-size: 5vw;
-        margin:  0 2rem 0 0;
+        font-size: 4.5vw;
+        margin: 0 2rem 0 0;
         letter-spacing: 3px;
         line-height: 2rem;
-        
       }
       p {
-        font-size: 4vw;
+        font-size: 2.5vw;
       }
       img {
         align-self: baseline;
@@ -34,15 +34,13 @@
         transition: all 0.2s ease-in-out;
         cursor: pointer;
         outline: none;
-        font-size: 1.7rem;
         font-weight: 300;
         display: block;
         width: 100%;
-
       }
       .options {
         margin: 0.5rem;
-  
+
         .option {
           margin-bottom: 1rem;
           border-color: transparent;
@@ -52,18 +50,18 @@
           transition: all 0.2s ease-in-out;
           cursor: pointer;
           outline: none;
-          font-size: 1.7rem;
+          font-size: 5vw;
           font-weight: 300;
           display: block;
           display: flex;
           align-items: baseline;
           justify-content: flex-start;
-  
+
           input {
             visibility: hidden;
           }
           label {
-            font-size: 1.7rem;
+            font-size: 5vw;
             font-weight: 500;
           }
           b {
@@ -81,7 +79,7 @@
             align-self: center;
           }
         }
-  
+
         .option:hover {
           border: solid 2px;
           border-color: #7986cb;
@@ -90,23 +88,22 @@
             background-color: rgb(122, 136, 204, 0.5);
           }
         }
-  
+
         .disabled {
           cursor: not-allowed;
         }
-  
+
         .correct {
           border-color: green;
           b {
             background-color: green;
           }
-  
+
           img {
             content: url("../../assets/icons/icon-correct.svg");
           }
         }
-  
-  
+
         .active {
           border: solid 2px;
           border-color: #7986cb;
@@ -115,7 +112,7 @@
             background-color: rgb(122, 136, 204, 0.5);
           }
         }
-        
+
         .wrong {
           border-color: red;
           b {
@@ -127,16 +124,14 @@
         }
       }
       .submitBtn {
-        
         background-color: #7986cb;
         padding: 1rem;
       }
     }
   }
-  
 }
 
-@media screen and (min-width:770px) {
+@media screen and (min-width: 770px) {
   .main {
     display: flex;
     justify-content: space-between;
@@ -144,14 +139,14 @@
     .question {
       margin-top: 2rem;
       width: 45%;
-      
+
       h1 {
         margin-bottom: 2rem;
       }
       b {
         font-size: 2rem;
         width: 70%;
-        margin:  0 2rem 0 0;
+        margin: 0 2rem 0 0;
         letter-spacing: 3px;
         line-height: 2.5rem;
       }
@@ -180,7 +175,7 @@
       width: 50%;
       .options {
         margin: 0.5rem;
-  
+
         .option {
           width: 90%;
           margin-bottom: 1rem;
@@ -197,7 +192,7 @@
           display: flex;
           align-items: baseline;
           justify-content: flex-start;
-  
+
           input {
             visibility: hidden;
           }
@@ -220,7 +215,7 @@
             align-self: center;
           }
         }
-  
+
         .option:hover {
           border: solid 2px;
           border-color: #7986cb;
@@ -229,23 +224,22 @@
             background-color: rgb(122, 136, 204, 0.5);
           }
         }
-  
+
         .disabled {
           cursor: not-allowed;
         }
-  
+
         .correct {
           border-color: green;
           b {
             background-color: green;
           }
-  
+
           img {
             content: url("../../assets/icons/icon-correct.svg");
           }
         }
-  
-  
+
         .active {
           border: solid 2px;
           border-color: #7986cb;
@@ -254,7 +248,7 @@
             background-color: rgb(122, 136, 204, 0.5);
           }
         }
-        
+
         .wrong {
           border-color: red;
           b {
@@ -271,5 +265,4 @@
       }
     }
   }
-  
 }
