@@ -1,64 +1,134 @@
-.main {
-    margin: 6rem 4rem;
-    display: flex;
-    justify-content: space-between;
-    .left {
-        width: 50%;
-        p , b {
-            font-size: 4rem;
+@media screen and (max-width:768px) {
+    .main {
+        margin:4rem 1rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 100%;
+        .left {
+         b {
+                font-size: 12vw;
+            }
+           p  {
+            font-size: 15vw;
+            line-height: 3rem;
+           }
+            
         }
-        p {
-            margin-bottom: 3rem;
-        }
-        
-    }
-    .right {
-        width: 40%;
-        height: auto;
-        margin-left: 5rem;
-        
-        .scoreCard {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            .icon {
-                padding: 1rem;
-                font-size: 1rem;
+        .right {
+            margin-top: 2rem;
+            width: 90%;
+            height: auto;
+            .scoreCard {
                 display: flex;
+                flex-direction: column;
                 align-items: center;
+                .icon {
+                    padding: 1rem;
+                    font-size: 1rem;
+                    display: flex;
+                    align-items: center;
+                }
+                width: 100%;
+                border-radius: 8px;
+                b {
+                    font-size: 9rem;
+                    align-self: center;
+                    margin: 3rem 0 ;
+                    
+                }
+                p{
+                    font-size: 3rem;
+                    align-self: center;
+                    margin: 5rem 0 2rem 0;
+                }
             }
-            width: 100%;
-            border-radius: 8px;
-            b {
-                font-size: 9rem;
-                align-self: center;
-                margin: 3rem 0 ;
-                
+            button {
+                width: 100%;
+                margin: 1rem 0;
+                border-color: transparent;
+                padding: 1.2rem 0;
+                border-radius: 15px;
+                text-align: center;
+                transition: all 0.2s ease-in-out;
+                cursor: pointer;
+                outline: none;
+                font-size: 1.7rem;
+                font-weight: 300;
+                display: block;
             }
-            p{
-                font-size: 3rem;
-                align-self: center;
-                margin: 5rem 0 2rem 0;
+    
+            button:hover {
+                background-color: grey;
+                cursor: pointer;
             }
         }
-        button {
-            width: 100%;
-            margin: 1rem 0;
-            border-color: transparent;
-            padding: 1.2rem 0;
-            border-radius: 15px;
-            text-align: center;
-            transition: all 0.2s ease-in-out;
-            cursor: pointer;
-            outline: none;
-            font-size: 1.7rem;
-            font-weight: 300;
-            display: block;
-        }
+    }
+}
 
-        button:hover {
-            background-color: grey;
-            cursor: pointer;
+@media screen and (min-width:770px) {
+    .main {
+        margin: 6rem 4rem;
+        display: flex;
+        justify-content: space-between;
+        .left {
+            width: 50%;
+            p , b {
+                font-size: 4rem;
+            }
+            p {
+                margin-bottom: 3rem;
+            }
+            
+        }
+        .right {
+            width: 40%;
+            height: auto;
+            margin-left: 5rem;
+            
+            .scoreCard {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                .icon {
+                    padding: 1rem;
+                    font-size: 1rem;
+                    display: flex;
+                    align-items: center;
+                }
+                width: 100%;
+                border-radius: 8px;
+                b {
+                    font-size: 9rem;
+                    align-self: center;
+                    margin: 3rem 0 ;
+                    
+                }
+                p{
+                    font-size: 3rem;
+                    align-self: center;
+                    margin: 5rem 0 2rem 0;
+                }
+            }
+            button {
+                width: 100%;
+                margin: 1rem 0;
+                border-color: transparent;
+                padding: 1.2rem 0;
+                border-radius: 15px;
+                text-align: center;
+                transition: all 0.2s ease-in-out;
+                cursor: pointer;
+                outline: none;
+                font-size: 1.7rem;
+                font-weight: 300;
+                display: block;
+            }
+    
+            button:hover {
+                background-color: grey;
+                cursor: pointer;
+            }
         }
     }
 }
