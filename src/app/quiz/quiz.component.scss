@@ -1,82 +1,97 @@
+.main {
+  display: flex;
+  justify-content: space-between;
+
+  .question {
+    margin-top: 2rem;
+
+    b {
+      margin: 0 2rem 0 0;
+      letter-spacing: 3px;
+    }
+    img {
+      align-self: baseline;
+    }
+  }
+  .optionsSection {
+    button {
+      margin-bottom: 1rem;
+      border-color: transparent;
+      padding: 1.2rem 0;
+      border-radius: 15px;
+      text-align: center;
+      transition: all 0.2s ease-in-out;
+      cursor: pointer;
+      outline: none;
+      font-weight: 300;
+      display: block;
+    }
+    .option {
+      margin-bottom: 1rem;
+      border-color: transparent;
+      padding: 1.2rem 0;
+      border-radius: 15px;
+      text-align: center;
+      transition: all 0.2s ease-in-out;
+      cursor: pointer;
+      outline: none;
+      font-weight: 300;
+      display: block;
+      display: flex;
+      align-items: baseline;
+      justify-content: flex-start;
+
+      input {
+        visibility: hidden;
+      }
+      b {
+        color: #626c7f;
+        padding: 0.8rem;
+        border-radius: 8px;
+        margin: 0 0.5rem;
+        background-color: #f4f6fa;
+      }
+      p {
+        font-size: 1.5rem;
+      }
+      img {
+        margin-right: 0;
+        align-self: center;
+      }
+    }
+  }
+ 
+}
+
 @media screen and (max-width: 768px) {
   .main {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
     width: 100%;
     .question {
-      margin-top: 2rem;
-
       h1 {
         font-size: 5vw;
       }
       b {
         font-size: 4.5vw;
-        margin: 0 2rem 0 0;
-        letter-spacing: 3px;
         line-height: 2rem;
       }
       p {
         font-size: 2.5vw;
       }
-      img {
-        align-self: baseline;
-      }
     }
     .optionsSection {
       margin-top: 1rem;
       button {
-        margin-bottom: 1rem;
-        border-color: transparent;
-        padding: 1.2rem 0;
-        border-radius: 15px;
-        text-align: center;
-        transition: all 0.2s ease-in-out;
-        cursor: pointer;
-        outline: none;
-        font-weight: 300;
-        display: block;
         width: 100%;
       }
       .options {
         margin: 0.5rem;
 
         .option {
-          margin-bottom: 1rem;
-          border-color: transparent;
-          padding: 1.2rem 0;
-          border-radius: 15px;
-          text-align: center;
-          transition: all 0.2s ease-in-out;
-          cursor: pointer;
-          outline: none;
           font-size: 5vw;
-          font-weight: 300;
-          display: block;
-          display: flex;
-          align-items: baseline;
-          justify-content: flex-start;
-
-          input {
-            visibility: hidden;
-          }
+          
           label {
             font-size: 5vw;
             font-weight: 500;
-          }
-          b {
-            color: #626c7f;
-            padding: 0.8rem;
-            border-radius: 8px;
-            margin: 0 0.5rem;
-            background-color: #f4f6fa;
-          }
-          p {
-            font-size: 1.5rem;
-          }
-          img {
-            margin-right: 0;
-            align-self: center;
           }
         }
 
@@ -133,11 +148,8 @@
 
 @media screen and (min-width: 770px) {
   .main {
-    display: flex;
-    justify-content: space-between;
     margin: 4rem;
     .question {
-      margin-top: 2rem;
       width: 45%;
 
       h1 {
@@ -146,31 +158,17 @@
       b {
         font-size: 2rem;
         width: 70%;
-        margin: 0 2rem 0 0;
-        letter-spacing: 3px;
         line-height: 2.5rem;
       }
       p {
         font-size: 1.5rem;
       }
-      img {
-        align-self: baseline;
-      }
+     
     }
     .optionsSection {
       button {
         width: 90%;
-        margin-bottom: 1rem;
-        border-color: transparent;
-        padding: 1.2rem 0;
-        border-radius: 15px;
-        text-align: center;
-        transition: all 0.2s ease-in-out;
-        cursor: pointer;
-        outline: none;
         font-size: 1.7rem;
-        font-weight: 300;
-        display: block;
       }
       width: 50%;
       .options {
@@ -178,41 +176,13 @@
 
         .option {
           width: 90%;
-          margin-bottom: 1rem;
-          border-color: transparent;
-          padding: 1.2rem 0;
-          border-radius: 15px;
-          text-align: center;
-          transition: all 0.2s ease-in-out;
-          cursor: pointer;
-          outline: none;
           font-size: 1.7rem;
-          font-weight: 300;
-          display: block;
-          display: flex;
-          align-items: baseline;
-          justify-content: flex-start;
+         
 
-          input {
-            visibility: hidden;
-          }
+      
           label {
             font-size: 1.7rem;
             font-weight: 500;
-          }
-          b {
-            color: #626c7f;
-            padding: 0.8rem;
-            border-radius: 8px;
-            margin: 0 0.5rem;
-            background-color: #f4f6fa;
-          }
-          p {
-            font-size: 1.5rem;
-          }
-          img {
-            margin-right: 0;
-            align-self: center;
           }
         }
 
