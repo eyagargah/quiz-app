@@ -59,12 +59,11 @@
         align-self: center;
       }
     }
-     .submitBtn {
-        background-color: #7986cb;
-        text-align: center;
-      }
+    .submitBtn {
+      background-color: #7986cb;
+      text-align: center;
+    }
   }
- 
 }
 
 @media screen and (max-width: 768px) {
@@ -93,7 +92,7 @@
 
         .option {
           font-size: 5vw;
-          
+
           label {
             font-size: 5vw;
             font-weight: 500;
@@ -143,7 +142,6 @@
           }
         }
       }
-     
     }
   }
 }
@@ -165,7 +163,6 @@
       p {
         font-size: 1.5rem;
       }
-     
     }
     .optionsSection {
       button {
@@ -179,9 +176,7 @@
         .option {
           width: 90%;
           font-size: 1.7rem;
-         
 
-      
           label {
             font-size: 1.7rem;
             font-weight: 500;
@@ -231,7 +226,6 @@
           }
         }
       }
-      
     }
   }
 }
