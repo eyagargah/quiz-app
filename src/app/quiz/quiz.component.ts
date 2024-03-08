@@ -36,7 +36,7 @@ export class QuizComponent {
     this.icon= this.quizService.getIcon()
     this.title = this.quizService.getTitle()
 
-    this.subjectIcon.children[0].src = "assets/icons/"+ this.icon
+    this.subjectIcon.children[0].src = "assets/icons"+ this.icon
     this.subjectIcon.children[1].innerHTML = this.title
     
     
