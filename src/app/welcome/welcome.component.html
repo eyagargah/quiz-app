@@ -6,7 +6,7 @@
   <div class="subjects">
     <div class="buttons" *ngFor="let d of data; let i = index">
       <button (click)="getQuizQuestions($event, i)">
-        <img alt="quiz icon" src="assets/icons{{ d.icon }}" routerLink="quiz" />
+        <img  src="assets/icons{{d.icon}}" routerLink="quiz" />
         <b>{{ d.title }}</b>
       </button>
     </div>
